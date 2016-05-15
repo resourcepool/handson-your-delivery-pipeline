@@ -1,152 +1,337 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Handson your delivery pipeline</title>
+  <title>Handson your delivery pipeline</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-		<!-- Custom style -->
-		<link rel="stylesheet" href="css/custom/reveal.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <!-- Custom style -->
+  <link rel="stylesheet" href="css/custom/reveal.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Hands-on your delivery pipeline</h2>
-					<p>Jean-Charles Legras - Loïc Ortola</p>
-				</section>
-				<section>
-					<h2>What's the plan?</h2>
-					<ul>
-						<li>Introduction</li>
-						<ul>
-							<li>World-War-Web: Dev vs Ops</li>
-							<li>A new hope</li>
-							<li>The dream-team</li>
-						</ul>
-						<li>CI, CD, WTF?</li>
-						<li>Ops Tools</li>
-						<ul>
-							<li>History: Floppys to Containers</li>
-							<li>Help! Ansible &amp; Docker</li>
-						</ul>
-						<li>Feedback: Real-life Use-case</li>
-						<li>Hands-on. The dev strikes back</li>
-					</ul>
-				</section>
-				<section>
-					<section>
-						<h2>Introduction</h2>
-						<p>A long time ago, in a galaxy not that far away...</p>
-					</section>
-					<section>
-						<h2>World-War-Web: Dev vs Ops</h2>
-						
-					</section>
-					<section>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-					</section>
-					<section>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-					</section>
-					<section>
-						<h2>A new hope</h2>
-					</section>
-					<section>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-					</section>
-					<section>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-					</section>
-					<section>
-						<h2>The dream-team</h2>
-					</section>
-					<section>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-					</section>
-					<section>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Help! Ansible &amp; Docker</h2>
-					</section>
-					<section>
-						<h3>Docker, the sofware logistics provider</h3>
-						<img style="width: 60%; height: 60%" class="img-no-default-style" src="images/docker.png" alt="docker logo" />
-					</section>
-					<section>
-						<h3>Isolation</h3>
-						<ul>
-							<li>The more software you use, the more difficult it is to manage</li>
-							<li>Every environment is the same</li>
-							<li>Easier to create build, test and deploy pipelines</li>
-							<li>Protect your computer</li>
-						</ul>
-					</section>
-					<section>
-						<figure>
-							<img src="images/isolation_libs.svg" alt="dependencies scattered"/>
-							<figcaption>Dependencies scattered</figcaption>
-						</figure>
-					</section>
-					<section>
-						<figure>
-							<img src="images/isolation_dependencies.svg" alt="dependencies isolation"/>
-							<figcaption>Dependencies isolation</figcaption>
-						</figure>
-					</section>
-					<section>
-						<h3>Standardization</h3>
-						<ul>
-							<li>Same images used for different environments</li>
-							<li>Portable</li>
-							<li>Open</li>
-							<li>Reproductible</li>
-							<li>Scalable</li>
-						</ul>
-					</section>
-					<section>
-						<h3>MORE</h3>
-						<ul>
-							<li>Empowers developpers</li>
-							<li>Creating instances is fast and cheap</li>
-							<li>Version control of your Docker images</li>
-							<li>Share your Docker images</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Ansible</h3>
-						<img style="width: 40%; height: 40%" class="img-no-default-style" src="images/Ansible_logo.png" alt="ansible logo" />
-					</section>
-					<section>
-						<ul>
-							<li>IaS</li>
-							<li>Idempotency</li>
-							<li>Simple YAML DSL for declarative programming</li>
-							<li>Re-distributable, re-usable packages (Ansible Galaxy)</li>
-							<li>Standardization: playbook, role, task...</li>
-							<li>Works against multiple systems in your infrastructure at the same time</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Directory layout for a given role</h3>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h2>Hands-on your delivery pipeline</h2>
+      <p>Jean-Charles Legras - Loïc Ortola</p>
+    </section>
+    <section>
+      <h2>What's the plan?</h2>
+      <ul>
+        <li>Introduction</li>
+        <ul>
+          <li>World-War-Web: Dev vs Ops</li>
+          <li>A new hope</li>
+          <li>The dream-team</li>
+        </ul>
+        <li>Ops Tools</li>
+        <ul>
+          <li>Help! Ansible &amp; Docker</li>
+        </ul>
+        <li>Feedback: Real-life Use-case</li>
+        <li>Hands-on. The dev strikes back</li>
+      </ul>
+    </section>
+    <section>
+      <section data-background="images/alongtimeago.png">
+        <h2>Introduction</h2>
+        <br/><br/><br/><br/><br/>
+      </section>
+      <section data-background="images/episode1.png">
+        <h2>World-War-Web: Dev vs Ops</h2>
+        <a href="https://brorlandi.github.io/StarWarsIntroCreator/#!/AKHqVJcuSPSYWWhVkeOC" target="_blank">Click here</a>
+        <br/><br/><br/><br/><br/>
+      </section>
+      <section>
+        <h2>World-War-Web: Dev vs Ops</h2>
+        <p>Two separate worlds</p>
+        <div>
+          <div style="overflow: auto; float: left; width: 450px;">
+            <br/>
+            <b>Devs:</b>
+            <br/>Develop new features: Follow business requirements
+          </div>
+          <div style="overflow: auto; float: right; width: 450px;">
+            <br/>
+            <b>Ops:</b>
+            <br/>Maintain availability: <br/>Keep the software up and running.
+          </div>
+        </div>
+        
+        
+      </section>
+      <section>
+        <h3>Behind the eyes of the Ops</h3>
+        Ops are the Guardians of the temple.
+        <img src="images/opsvision_ops_1.jpg" width="400"/>
+        <br/>
+        Ops are the high-voltige firefighters who save your ass
+        <img src="images/opsvision_ops_2.jpg" width="300"/>
+      </section>
+      <section>
+        <h3>Behind the eyes of the Ops</h3>
+        Devs never RTFM. They just don't care
+        <br/>
+        <img src="images/opsvision_devs_1.jpg" width="300"/>
+        <br/>
+        Devs are undisciplined and love blowing up stuff
+        <img src="images/opsvision_devs_2.png" width="300"/>
+      </section>
+      <section>
+        <h3>Behind the eyes of the Devs</h3>
+        Devs are the craftmen and architects of the 21st century
+        <img src="images/devsvision_dev_1.jpg" width="300"/>
+        <br/>
+        Devs are cutting-edge visionaries and improvers
+        <img src="images/devsvision_dev_2.png" width="300"/>
+      </section>
+      <section>
+        <h3>Behind the eyes of the Devs</h3>
+        Ops just hold us back. They never say "yes"
+        <img src="images/devsvision_ops_1.jpg" width="300"/>
+        <br/>
+        Ops are old-school retards, allergic to change
+        <img src="images/devsvision_ops_2.jpg" width="300"/>
+      </section>
+      <section>
+        <h2>Devs everyday primitives & pains</h2>
+        <p class="blue">Primitives</p>
+        <ul>
+          <li>Version control system</li>
+          <li>Build / Unit tests</li>
+          <li>Documentation</li>
+        </ul>
+        <p class="blue">Pains</p>
+        <ul>
+          <li>Dev environment setup & maintainability</li>
+          <li>UAT / Staging / Release cycle</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Ops everyday primitives & pains</h2>
+        <p class="blue">Primitives</p>
+        <ul>
+          <li>Backup / Disaster Recovery</li>
+          <li>HA</li>
+          <li>Monitoring</li>
+          <li>Scripting</li>
+        </ul>
+        <p class="blue">Pains</p>
+        <ul>
+          <li>Environment change</li>
+          <li>Track Releases</li>
+          <li>Cluster setup & maintainability</li>
+          <li>Migrations</li>
+        </ul>
+      </section>
+      <section>
+        <p>Both have <span class="blue">tools</span> to help them work efficiently.
+          <br/>Both <span class="blue">share some pains</span>:
+        <ul>
+          <li>Setting up <span class="blue">environments</span></li>
+          <li>Handling <span class="blue">change</span></li>
+          <li>Handling <span class="blue">releases</span></li>
+        </ul>
+        </p>
+      </section>
+      <section>
+        <h2>A new hope</h2>
+      </section>
+      <section>
+        <h3>early 1990s: The Old days</h3>
+        <img src="images/norton_ghost.jpg" width="200"/>
+        <p><b class="blue">Devs:</b> chain workers. Process, discipline, write code.</p>
+        <p><b class="blue">Ops:</b> Responsible for prod. Do system backups on disks.</p>
+      </section>
+      <section>
+        <h3>early 2000s: Rise of the (Virtual) Machines</h3>
+        <img src="images/virtualpc.gif" width="200"/>
+        <p><b class="blue">Devs:</b> become important. They make the product. Agile?</p>
+        <p><b class="blue">Ops:</b> Responsible for prod. Start using VMs for fast-bootstrap. Will never replace baremetal OSes.</p>
+      </section>
+      <section>
+        <h3>late 2000s: Rise of the Cloud</h3>
+        (<a href="https://aws.amazon.com/blogs/aws/amazon_ec2_beta/" target="_blank">Amazon EC2 beta announcement Aug
+        2006</a>)
+        <p>IaaS, more devices, stronger TTM constraints, new technologies</p>
+        <img src="images/weneedtotalk.gif"/>
+        <p class="blue">WE NEED TO TALK</p>
+      </section>
+      <section>
+        <ul>
+          <li>Ops need technologies better than shell-scripts to <span class="blue">provision their environments</span></li>
+          <li>Ops need <span class="blue">versioning tools</span></li>
+          <li>Devs need <span class="blue">more</span> releases, <span class="blue">faster</span> feedback</li>
+          <li>Devs make more technology changes</li>
+        </ul>
+      </section>
+      <section>
+        <h2>The dream-team</h2>
+        <img src="images/avengers.jpg" width="500"/>
+        <br/>
+        A common objective: <br/>Deliver new features <b>and</b> maintain availability
+      </section>
+      <section>
+        DevOps:
+        <ul>
+          <li>Spread responsiblity among <span class="blue">both</span> devs and ops</li>
+          <ul>
+            <li>Both ensure the <span class="blue">quality</span> of the release</li>
+            <li>Both <span class="blue">understand</span> the primitives of the other</li>
+          </ul>
+          <br/>
+          <li>Use the best of <span class="blue">both</span> worlds</li>
+          <ul>
+            <li>Infrastructure as code</li>
+            <li>Code over configuration</li>
+            <li>Continuous testing / integration / delivery pipeline</li>
+            <li>Quality</li>
+          </ul>
+        </ul>
+      </section>
+      <section>
+        <h3>2010s: Rise of the μService</h3>
+        Elasticity:
+        <br/>
+        <ul>
+          <li>Need finer scalability</li>
+          <li>Need better service-discovery</li>
+          <li>Implies heterogeneous environments</li>
+        </ul>
+        <p><span class="blue">WE NEED TO TALK. AGAIN.</span></p>
+      </section>
+      <section>
+        DevOps:
+        <br/>
+        <ul>
+          <li>Co-develop dev/prod <span class="blue">environments</span></li>
+          <ul>
+            <li>1 process = 1 service = 1 env</li>
+            <li><span class="blue">Versioned</span> provisioning / conf</li>
+          </ul>
+          <br/>
+          <li>Change paradigms from <span class="blue">"app"</span> to <span class="blue">"container"</span></li>
+          <ul>
+            <li>Bundle app & runtime</li>
+            <li>Provide a service-level abstraction</li>
+            <li>Deploy and scale easily</li>
+          </ul>
+        </ul>
+      </section>
+      <section>
+        <h3>For <span class="blue">Devs</span></h3>
+        <ul>
+          <li>Level-up: you have the <span class="blue">responsibility</span> of what you push</li>
+          <li>More testing <span class="blue">discipline</span></li>
+          <li>Think <span class="blue">as an Ops</span> => container bundle</li>
+          <li><span class="blue">Share responsibility</span> for environment config</li>
+        </ul>
+      </section>
+      <section>
+        <h3>For <span class="blue">Ops</span></h3>
+        <ul>
+          <li>Level-up: you accept to rely on monitoring and <span class="blue">automation</span></li>
+          <li>More <span class="blue">feedback discipline</span></li>
+          <li>Container expertise</li>
+          <li>Think as a <span class="blue">Dev</span> => versioning / infra as code</li>
+          <li>Spend time on rollback strategy / CI / CD / Security</li>
+        </ul>
+      </section>
+      <section>
+        <h2>2020s Trailer: What's coming</h2>
+        <img src="images/winteriscoming.gif"/>
+        <ul>
+          <li>Infrastructure code testing</li>
+          <li>Better CD pipeline tools</li>
+          <li>Better Container integration within the clouds</li>
+          <li>Better infrastructure monitoring (container-based)</li>
+        </ul>
+      </section>
+      <section data-background="images/gimme.gif">
+        <h2>Gimme some tools!</h2>
+      </section>
+    </section>
+    </section>
+    <section>
+      <section>
+        <h2>Help! Ansible &amp; Docker</h2>
+      </section>
+      <section>
+        <h3>Docker, the sofware logistics provider</h3>
+        <img style="width: 60%; height: 60%" class="img-no-default-style" src="images/docker.png" alt="docker logo"/>
+      </section>
+      <section>
+        <h3>Isolation</h3>
+        <ul>
+          <li>The more software you use, the more difficult it is to manage</li>
+          <li>Every environment is the same</li>
+          <li>Easier to create build, test and deploy pipelines</li>
+          <li>Protect your computer</li>
+        </ul>
+      </section>
+      <section>
+        <figure>
+          <img src="images/isolation_libs.svg" alt="dependencies scattered"/>
+          <figcaption>Dependencies scattered</figcaption>
+        </figure>
+      </section>
+      <section>
+        <figure>
+          <img src="images/isolation_dependencies.svg" alt="dependencies isolation"/>
+          <figcaption>Dependencies isolation</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h3>Standardization</h3>
+        <ul>
+          <li>Same images used for different environments</li>
+          <li>Portable</li>
+          <li>Open</li>
+          <li>Reproductible</li>
+          <li>Scalable</li>
+        </ul>
+      </section>
+      <section>
+        <h3>MORE</h3>
+        <ul>
+          <li>Empowers developpers</li>
+          <li>Creating instances is fast and cheap</li>
+          <li>Version control of your Docker images</li>
+          <li>Share your Docker images</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Ansible</h3>
+        <img style="width: 40%; height: 40%" class="img-no-default-style" src="images/Ansible_logo.png"
+             alt="ansible logo"/>
+      </section>
+      <section>
+        <ul>
+          <li>IaS</li>
+          <li>Idempotency</li>
+          <li>Simple YAML DSL for declarative programming</li>
+          <li>Re-distributable, re-usable packages (Ansible Galaxy)</li>
+          <li>Standardization: playbook, role, task...</li>
+          <li>Works against multiple systems in your infrastructure at the same time</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Directory layout for a given role</h3>
 						<pre>
 $ tree
 ├── roles
@@ -165,9 +350,9 @@ $ tree
 │       └── vars
 │           └── main.yml
 						</pre>
-					</section>
-					<section>
-						<h3>Example of an inventory file</h3>
+      </section>
+      <section>
+        <h3>Example of an inventory file</h3>
 						<pre>
 [rwd_prod]
 	mlvap0[1:5]
@@ -178,27 +363,31 @@ $ tree
 [factories]
 	moytux[1:2]
 						</pre>
-					</section>
-				</section>
-			</div>
-		</div>
+      </section>
+    </section>
+  </div>
+</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+<script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      {src: 'plugin/markdown/marked.js'},
+      {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/notes/notes.js', async: true},
+      {
+        src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+        hljs.initHighlightingOnLoad();
+      }
+      }
+    ]
+  });
+</script>
+</body>
 </html>
