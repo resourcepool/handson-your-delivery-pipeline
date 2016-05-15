@@ -8,6 +8,8 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<!-- Custom style -->
+		<link rel="stylesheet" href="css/custom/reveal.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,7 +43,7 @@
 						<li>Ops Tools</li>
 						<ul>
 							<li>History: Floppys to Containers</li>
-							<li>Help! Ansible & Docker</li>
+							<li>Help! Ansible &amp; Docker</li>
 						</ul>
 						<li>Feedback: Real-life Use-case</li>
 						<li>Hands-on. The dev strikes back</li>
@@ -81,7 +83,103 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 					</section>
 				</section>
-				<section>Slide 4</section>
+				<section>
+					<section>
+						<h2>Help! Ansible &amp; Docker</h2>
+					</section>
+					<section>
+						<h3>Docker, the sofware logistics provider</h3>
+						<img style="width: 60%; height: 60%" class="img-no-default-style" src="images/docker.png" alt="docker logo" />
+					</section>
+					<section>
+						<h3>Isolation</h3>
+						<ul>
+							<li>The more software you use, the more difficult it is to manage</li>
+							<li>Every environment is the same</li>
+							<li>Easier to create build, test and deploy pipelines</li>
+							<li>Protect your computer</li>
+						</ul>
+					</section>
+					<section>
+						<figure>
+							<img src="images/isolation_libs.svg" alt="dependencies scattered"/>
+							<figcaption>Dependencies scattered</figcaption>
+						</figure>
+					</section>
+					<section>
+						<figure>
+							<img src="images/isolation_dependencies.svg" alt="dependencies isolation"/>
+							<figcaption>Dependencies isolation</figcaption>
+						</figure>
+					</section>
+					<section>
+						<h3>Standardization</h3>
+						<ul>
+							<li>Same images used for different environments</li>
+							<li>Portable</li>
+							<li>Open</li>
+							<li>Reproductible</li>
+							<li>Scalable</li>
+						</ul>
+					</section>
+					<section>
+						<h3>MORE</h3>
+						<ul>
+							<li>Empowers developpers</li>
+							<li>Creating instances is fast and cheap</li>
+							<li>Version control of your Docker images</li>
+							<li>Share your Docker images</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Ansible</h3>
+						<img style="width: 40%; height: 40%" class="img-no-default-style" src="images/Ansible_logo.png" alt="ansible logo" />
+					</section>
+					<section>
+						<ul>
+							<li>IaS</li>
+							<li>Idempotency</li>
+							<li>Simple YAML DSL for declarative programming</li>
+							<li>Re-distributable, re-usable packages (Ansible Galaxy)</li>
+							<li>Standardization: playbook, role, task...</li>
+							<li>Works against multiple systems in your infrastructure at the same time</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Directory layout for a given role</h3>
+						<pre>
+$ tree
+├── roles
+│   └── nginx
+│       ├── README.md
+│       ├── defaults
+│       │   └── main.yml
+│       ├── files
+│       ├── handlers
+│       │   └── main.yml
+│       ├── meta
+│       │   └── main.yml
+│       ├── tasks
+│       │   └── main.yml
+│       ├── templates
+│       └── vars
+│           └── main.yml
+						</pre>
+					</section>
+					<section>
+						<h3>Example of an inventory file</h3>
+						<pre>
+[rwd_prod]
+	mlvap0[1:5]
+[rwd_preprod]
+	clgap0[1:5]
+[recette]
+	xrapi0[0:1]
+[factories]
+	moytux[1:2]
+						</pre>
+					</section>
+				</section>
 			</div>
 		</div>
 
