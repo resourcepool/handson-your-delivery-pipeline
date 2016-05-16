@@ -9,6 +9,10 @@ Install the latest version of virtualbox [here](https://www.virtualbox.org/wiki/
 
 ### Vagrant
 Install the latest version of vagrant [here](https://www.vagrantup.com/downloads.html)
+Install the  vagrant-hostupdater plugin 
+```sh
+vagrant plugin install vagrant-hostsupdater
+```
 
 ### VM bootstrap
 Open your favorite shell in the ./ci-server folder and run  
