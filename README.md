@@ -8,7 +8,7 @@ In order to prepare for your handson session, you need to install a few things:
 Install the latest version of virtualbox [here](https://www.virtualbox.org/wiki/Downloads)
 
 ### Vagrant
-Install the latest version of vagrant [here](https://www.vagrantup.com/downloads.html)
+Install the latest version of vagrant [here](https://www.vagrantup.com/downloads.html)  
 Install the  vagrant-hostupdater plugin 
 ```sh
 vagrant plugin install vagrant-hostsupdater
