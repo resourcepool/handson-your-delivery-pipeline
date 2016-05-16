@@ -1,0 +1,12 @@
+---
+- hosts: ci-server
+  user: vagrant
+  sudo: true
+  vars:
+    jenkins_plugins:
+     - github-organization-folder
+     - workflow-aggregator
+  roles:
+    - jenkins
+    - docker
+    - common
