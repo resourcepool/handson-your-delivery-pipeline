@@ -3,10 +3,6 @@
   iptables: table=nat chain=PREROUTING protocol=tcp match=tcp destination_port=80 jump=REDIRECT to_ports=8080 comment="Redirect web traffic to port 8080"
   become: yes
   
-- name: Disable external access to port 8080
-  iptables: chain=INPUT protocol=tcp match=tcp destination_port=8080 jump=DROP
-  become: yes
-  
 - name: Allow jenkins to access docker commands
   sudo: yes
   command: usermod -aG docker jenkins
