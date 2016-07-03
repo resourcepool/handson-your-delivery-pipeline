@@ -1,5 +1,5 @@
  - src: geerlingguy.java
  - src: angstwad.docker_ubuntu
    name: docker
- - src: loicortola.ansible-role-jenkins
+ - src: geerlingguy.ansible-role-jenkins
    name: jenkins
